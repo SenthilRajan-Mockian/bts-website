@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    <title>Bharathidasan Tamil School - Admissions Open 2026-27</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Tamil:wght@400;700&family=Playfair+Display:wght@700;900&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #1a3a2a 0%, #2d5a3f 50%, #1a3a2a 100%);
+            color: #fff;
+            text-align: center;
+            padding: 40px 20px 30px;
+            position: relative;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #c8a84b, #f0d060, #c8a84b);
+        }
+
+        .hero-title-row {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 40px;
+            max-width: 1100px;
+            margin: 0 auto 10px;
+        }
+
+        .hero-title-text {
+            text-align: center;
+            flex: 1;
+        }
+
+        .hero-portrait {
+            width: 250px;
+            height: auto;
+            border-radius: 12px;
+            object-fit: cover;
+            border: 3px solid rgba(240, 208, 96, 0.5);
+            flex-shrink: 0;
+        }
+
+        .tamil-header {
+            font-family: 'Noto Serif Tamil', serif;
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            color: #f0d060;
+        }
+
+        .school-name-tamil {
+            font-family: 'Noto Serif Tamil', serif;
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+
+        .school-name-english {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            font-weight: 900;
+            letter-spacing: 2px;
+            margin-bottom: 20px;
+        }
+
+        .tagline {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+            color: #f0d060;
+        }
+
+        .tagline span {
+            color: #fff;
+        }
+
+        .quote-section {
+            max-width: 600px;
+            margin: 0 auto 20px;
+            padding: 20px;
+            font-style: italic;
+        }
+
+        .quote-tamil {
+            font-family: 'Noto Serif Tamil', serif;
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+            color: #e8e8e8;
+        }
+
+        .quote-english {
+            font-size: 0.95rem;
+            color: #ccc;
+        }
+
+        .admissions-section {
+            background: linear-gradient(135deg, #f9f6ef 0%, #fff 100%);
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .admissions-banner {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .admissions-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            font-weight: 900;
+            color: #1a3a2a;
+            margin-bottom: 5px;
+        }
+
+        .admissions-year {
+            font-family: 'Playfair Display', serif;
+            font-size: 4rem;
+            font-weight: 900;
+            color: #c8a84b;
+            margin-bottom: 20px;
+        }
+
+        .admissions-desc {
+            font-size: 1.1rem;
+            color: #555;
+            max-width: 500px;
+            margin: 0 auto 30px;
+        }
+
+        .admissions-fee {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: #1a3a2a;
+            margin-bottom: 25px;
+        }
+
+
+        .cta-buttons {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .cta-btn {
+            display: inline-block;
+            padding: 14px 32px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1rem;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .cta-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .cta-btn-primary {
+            background: #1a3a2a;
+            color: #fff;
+        }
+
+        .cta-btn-secondary {
+            background: #fff;
+            color: #1a3a2a;
+            border: 2px solid #1a3a2a;
+        }
+
+        .why-section {
+            background: #1a3a2a;
+            padding: 60px 20px;
+            color: #fff;
+        }
+
+        .why-title {
+            text-align: center;
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            margin-bottom: 40px;
+            color: #f0d060;
+        }
+
+        .features-list {
+            max-width: 800px;
+            margin: 0 auto;
+            list-style: disc;
+            padding-left: 24px;
+        }
+
+        .features-list li {
+            margin-bottom: 14px;
+            font-size: 1rem;
+            color: #ccc;
+            line-height: 1.5;
+        }
+
+        .features-list li strong {
+            color: #f0d060;
+        }
+
+        .footer {
+            background: #111;
+            color: #fff;
+            padding: 40px 20px;
+        }
+
+        .footer-content {
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .footer-quote {
+            font-family: 'Noto Serif Tamil', serif;
+            font-size: 1.1rem;
+            color: #f0d060;
+            line-height: 1.8;
+        }
+
+        .footer-quote span {
+            font-size: 0.9rem;
+            color: #ccc;
+        }
+
+        .footer-right h4 {
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+            color: #f0d060;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 10px;
+            color: #ccc;
+            font-size: 0.9rem;
+        }
+
+        .contact-icon {
+            width: 20px;
+            text-align: center;
+        }
+
+        .class-info {
+            margin-top: 20px;
+            padding: 15px;
+            background: rgba(200, 168, 75, 0.1);
+            border: 1px solid #c8a84b;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .class-info strong {
+            color: #f0d060;
+            font-size: 1.1rem;
+        }
+
+        .class-info p {
+            color: #ccc;
+            margin-top: 5px;
+        }
+
+        .enroll-banner {
+            background: linear-gradient(90deg, #c8a84b, #f0d060);
+            color: #1a3a2a;
+            text-align: center;
+            padding: 25px 20px;
+        }
+
+        .enroll-banner h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            margin-bottom: 5px;
+        }
+
+        .enroll-banner p {
+            font-size: 0.95rem;
+        }
+
+        .location-section {
+            background: #fff;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .location-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            color: #1a3a2a;
+            margin-bottom: 10px;
+        }
+
+        .location-desc {
+            font-size: 1.1rem;
+            color: #555;
+            margin-bottom: 30px;
+        }
+
+        .location-section .campus-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .location-section .campus-gallery figure {
+            margin: 0;
+        }
+
+        .location-section .campus-gallery img {
+            width: 100%;
+            border-radius: 8px;
+            object-fit: cover;
+            height: 180px;
+        }
+
+        .location-section .campus-gallery figcaption {
+            margin-top: 8px;
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        .contact-section {
+            background: #1a3a2a;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .contact-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            color: #f0d060;
+            margin-bottom: 15px;
+        }
+
+        .contact-cards {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .contact-info-block {
+            padding: 0 30px;
+        }
+
+        .contact-info-block h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.2rem;
+            color: #fff;
+            margin-bottom: 12px;
+            text-align: center;
+        }
+
+        .contact-info-block .contact-item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 8px;
+            color: #ccc;
+            font-size: 0.95rem;
+        }
+
+        .contact-info-block .contact-item a,
+        .contact-info-block .contact-item span {
+            color: #ccc;
+            text-decoration: none;
+        }
+
+        .contact-section a {
+            color: #ccc;
+            text-decoration: none;
+        }
+
+        .faq-section {
+            background: #f9f6ef;
+            padding: 60px 20px;
+        }
+
+        .faq-title {
+            text-align: center;
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            color: #1a3a2a;
+            margin-bottom: 10px;
+        }
+
+        .faq-intro {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 40px;
+            color: #555;
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        .faq-list {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid #ddd;
+            padding: 0;
+        }
+
+        .faq-item summary {
+            padding: 20px 40px 20px 0;
+            font-size: 1rem;
+            font-weight: 700;
+            color: #1a3a2a;
+            cursor: pointer;
+            position: relative;
+            font-family: 'Open Sans', sans-serif;
+            list-style: none;
+        }
+
+        .faq-item summary::-webkit-details-marker {
+            display: none;
+        }
+
+        .faq-item summary::after {
+            content: '+';
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 1.5rem;
+            color: #c8a84b;
+        }
+
+        .faq-item[open] summary::after {
+            content: '−';
+        }
+
+        .faq-answer {
+            color: #555;
+            font-size: 0.95rem;
+            line-height: 1.7;
+            padding-bottom: 20px;
+        }
+
+        .faq-answer ul {
+            margin: 10px 0;
+            padding-left: 20px;
+        }
+
+        .faq-answer ul li {
+            margin-bottom: 6px;
+        }
+
+        .faq-answer a {
+            color: #1a3a2a;
+            font-weight: 600;
+        }
+
+        .campus-gallery {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+            margin-top: 15px;
+        }
+
+        .campus-gallery img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .campus-gallery figcaption {
+            font-size: 0.85rem;
+            color: #777;
+            text-align: center;
+            margin-top: 5px;
+        }
+
+        @media (max-width: 768px) {
+            .campus-gallery {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero-title-row {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .hero-portrait {
+                width: 220px;
+                order: -1;
+            }
+
+            .school-name-tamil {
+                font-size: 1.5rem;
+            }
+
+            .school-name-english {
+                font-size: 1.5rem;
+                letter-spacing: 1px;
+            }
+
+            .tamil-header {
+                font-size: 1rem;
+            }
+
+            .tagline {
+                font-size: 0.95rem;
+            }
+
+            .quote-section {
+                padding: 12px;
+            }
+
+            .quote-tamil {
+                font-size: 0.85rem;
+            }
+
+
+            .admissions-title {
+                font-size: 2rem;
+            }
+
+            .admissions-year {
+                font-size: 3rem;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .contact-cards {
+                flex-direction: column;
+                align-items: center;
+                max-width: 280px;
+                margin: 0 auto;
+            }
+
+            .contact-info-block {
+                text-align: center;
+                padding: 0;
+            }
+
+            .contact-info-block h3 {
+                text-align: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-portrait {
+                width: 180px;
+            }
+
+            .school-name-english {
+                font-size: 1.2rem;
+            }
+
+            .school-name-tamil {
+                font-size: 1.3rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section class="hero">
+        <div class="hero-title-row">
+            <div class="hero-title-text">
+                <p class="tamil-header">தமிழ் கற்போம்! பண்பாடு போற்றுவோம்!!</p>
+                <h1 class="school-name-tamil">பாரதிதாசன் தமிழ்ப் பள்ளி</h1>
+                <h2 class="school-name-english">BHARATHIDASAN TAMIL SCHOOL</h2>
+                <p class="tagline">In-person classes in Santa Clarita.</p>
+                <div class="quote-section">
+                    <p class="quote-tamil">"ஒருமைக்கண் தான்கற்ற கல்வி ஒருவற்கு<br>எழுமையும் ஏமாப் புடைத்து"</p>
+                    <p class="quote-english">The learning acquired in one birth<br>Protects a man in the next seven.</p>
+                </div>
+            </div>
+            <img src="images/bharathidasan.png" alt="Bharathidasan" class="hero-portrait">
+        </div>
+    </section>
+
+    <section class="admissions-section">
+        <div class="admissions-banner">
+            <h2 class="admissions-title">ADMISSIONS OPEN</h2>
+            <p class="admissions-year">2026–27</p>
+            <p class="admissions-desc">Enroll your child at Bharathidasan Tamil School where language meets culture and values.</p>
+            <p class="admissions-fee">Annual Fee: $400</p>
+            <div class="cta-buttons">
+                <a href="https://www.catamilacademy.org/registration.html" class="cta-btn cta-btn-primary" target="_blank">Register Now</a>
+                <a href="#contact" class="cta-btn cta-btn-secondary">Contact Us</a>
+                <a href="#faq" class="cta-btn cta-btn-secondary">FAQ</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="why-section">
+        <h2 class="why-title">WHY CHOOSE BHARATHIDASAN TAMIL SCHOOL?</h2>
+        <ul class="features-list">
+            <li><strong>Tamil Language Excellence</strong> — Comprehensive curriculum to build strong reading, writing, speaking and listening skills.</li>
+            <li><strong>Culture & Heritage</strong> — Lessons that connect students with Tamil traditions, literature, history and values.</li>
+            <li><strong>Experienced Teachers</strong> — Passionate and dedicated teachers committed to nurturing every student.</li>
+            <li><strong>Community & Belonging</strong> — A welcoming Tamil community that supports and celebrates our children.</li>
+        </ul>
+    </section>
+
+    <section class="location-section" id="location">
+        <h2 class="location-title">Where Will The Classes Be Held?</h2>
+        <p class="location-desc">College of the Canyons – Valencia Campus</p>
+        <div class="campus-gallery">
+            <figure>
+                <img src="images/campus-front.jpg" alt="Valencia Campus - Building Entrance">
+                <figcaption>Campus Building</figcaption>
+            </figure>
+            <figure>
+                <img src="images/classroom-1.jpg" alt="Classroom with projector and seating">
+                <figcaption>Classroom</figcaption>
+            </figure>
+            <figure>
+                <img src="images/parking-area.jpg" alt="Parking area with mountain views">
+                <figcaption>Parking Area</figcaption>
+            </figure>
+        </div>
+    </section>
+
+    <section class="contact-section" id="contact">
+        <h2 class="contact-title">Contact Us</h2>
+        <div class="contact-cards">
+            <div class="contact-info-block">
+                <h3>Logesh Varadan</h3>
+                <div class="contact-item">
+                    <span class="contact-icon">✉️</span>
+                    <span>logesh.varadan@gmail.com</span>
+                </div>
+                <div class="contact-item">
+                    <span class="contact-icon">📱</span>
+                    <a href="tel:+18184728878">+1 (818) 472-8878</a>
+                </div>
+            </div>
+        </div>
+        <div class="class-info">
+            <strong>Classes: KG – Grade 8</strong>
+            <p>Friday 6 – 7:30 PM</p>
+        </div>
+    </section>
+
+    <section class="faq-section" id="faq">
+        <h2 class="faq-title">Frequently Asked Questions</h2>
+        <p class="faq-intro">This is a 100% volunteer-driven, non-profit initiative. Our goal is to build not just a Tamil school, but a strong Tamil learning community for our children through in-person education.</p>
+        <div class="faq-list">
+            <details class="faq-item">
+                <summary>Who is organizing this Tamil school?</summary>
+                <div class="faq-answer">
+                    <p>This initiative is run entirely by volunteer parents from the community who are passionate about Tamil language and culture.</p>
+                </div>
+            </details>
+            <details class="faq-item">
+                <summary>Why in-person classes?</summary>
+                <div class="faq-answer">
+                    <ul>
+                        <li><strong>Higher focus and discipline</strong> – A classroom environment reduces distractions and helps children stay engaged compared to learning at home.</li>
+                        <li><strong>Peer learning and motivation</strong> – Seeing other kids learn and speak Tamil encourages participation and builds confidence.</li>
+                        <li><strong>Structured and consistent learning</strong> – Regular in-person classes create a routine, helping kids stay on track and progress steadily.</li>
+                        <li><strong>Hands-on cultural activities</strong> – Activities like storytelling, games, celebrations, and performances make learning Tamil fun and meaningful.</li>
+                        <li><strong>Improved reading and writing practice</strong> – Teachers can closely guide handwriting, reading fluency, and comprehension.</li>
+                        <li><strong>Stronger teacher–student connection</strong> – Personal interaction helps teachers understand each child's level and support them better.</li>
+                    </ul>
+                </div>
+            </details>
+            <details class="faq-item">
+                <summary>What will my child learn?</summary>
+                <div class="faq-answer">
+                    <p>Tamil reading, writing, speaking, culture, and interactive activities like storytelling and events.</p>
+                </div>
+            </details>
+            <details class="faq-item">
+                <summary>What is the CTA/ITA curriculum and how does it help?</summary>
+                <div class="faq-answer">
+                    <ul>
+                        <li>Structured curriculum (KG–Grade 8) covering speaking, reading, writing, grammar, and culture</li>
+                        <li>Designed for children growing up outside Tamil-speaking environments</li>
+                        <li>Proven to build confidence in speaking, reading, and writing through progressive levels</li>
+                        <li>Widely used across Tamil schools in California, the U.S., and internationally</li>
+                        <li>Includes textbooks, workbooks, and optional video/practice resources for home learning</li>
+                    </ul>
+                    <p>Website Reference: <a href="https://www.catamilacademy.org" target="_blank">catamilacademy.org</a></p>
+                </div>
+            </details>
+            <details class="faq-item">
+                <summary>Is this a non-profit organization?</summary>
+                <div class="faq-answer">
+                    <p>Yes. This is a non-profit effort. All funds collected will be used only for school-related expenses.</p>
+                </div>
+            </details>
+            <details class="faq-item">
+                <summary>What would be fees for the in-person Tamil school?</summary>
+                <div class="faq-answer">
+                    <p>The fee is <strong>$400 per student per annum</strong>.</p>
+                </div>
+            </details>
+            <details class="faq-item">
+                <summary>How will the fees be used?</summary>
+                <div class="faq-answer">
+                    <p>Fees will be used strictly for operational costs such as facility rental, books, and basic needs. Facility rental is expected to be the largest expense, approximately $350 per student/year. All funds are used strictly for school operations. No individual or volunteer receives any financial benefit.</p>
+                </div>
+            </details>
+            <details class="faq-item">
+                <summary>What age groups are eligible?</summary>
+                <div class="faq-answer">
+                    <p>Kindergarten (Age 5+) through Grade 8.</p>
+                </div>
+            </details>
+            <details class="faq-item">
+                <summary>What is the class schedule?</summary>
+                <div class="faq-answer">
+                    <p>Weekly classes on Fridays from 6 PM to 7:30 PM.</p>
+                </div>
+            </details>
+            <details class="faq-item">
+                <summary>Are there volunteering opportunities for students?</summary>
+                <div class="faq-answer">
+                    <p>Yes. There will be volunteer opportunities for students during weekly classes and Tamil school events depending on their Tamil skills.</p>
+                </div>
+            </details>
+            <details class="faq-item">
+                <summary>Are parents required to volunteer?</summary>
+                <div class="faq-answer">
+                    <p>Yes, this school depends on parent participation. We strongly encourage all parents to volunteer in some capacity to ensure the success of the school.</p>
+                </div>
+            </details>
+            <details class="faq-item">
+                <summary>What would be the typical schedule of the weekly class?</summary>
+                <div class="faq-answer">
+                    <ul>
+                        <li>6:00 PM: Assembly, Thamizh Thai Vaazthu and Announcements</li>
+                        <li>6:05 - 7:35 PM: Tamil Class Instructions</li>
+                        <li>7:35 - 7:45 PM: Snack break</li>
+                        <li>7:45 PM: Dismissal</li>
+                    </ul>
+                </div>
+            </details>
+            <details class="faq-item">
+                <summary>Is parking available for safe drop-off and pick-up?</summary>
+                <div class="faq-answer">
+                    <p>Yes. There would be plenty of parking for the parents to drop the kid safely. Exact parking lot information would be shared before the first class.</p>
+                </div>
+            </details>
+            <details class="faq-item">
+                <summary>Is pre-registration binding?</summary>
+                <div class="faq-answer">
+                    <p>No, it is only for planning purposes.</p>
+                </div>
+            </details>
+            <details class="faq-item">
+                <summary>How will updates be shared?</summary>
+                <div class="faq-answer">
+                    <p>Through WhatsApp group and email communication.</p>
+                </div>
+            </details>
+        </div>
+    </section>
+
+<footer class="footer">
+        <div class="footer-content">
+            <p class="footer-quote">"எங்கள் வாழ்வும் எங்கள் வளமும்<br>மங்காத தமிழென்று சங்கே முழங்கு!"<br><span>— பாரதிதாசன்</span></p>
+        </div>
+    </footer>
+
+</body>
+</html>
